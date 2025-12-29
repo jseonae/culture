@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+img, fieldset {
+    border:none;
+    vertical-align:top; 
+}
+address,cite,code,em {
+    font-style:normal;
+    font-weight:normal;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.hide,caption,legend {
+    line-height:0;
+    font-size:1px;
+    overflow:hidden;
+}
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+} */
+button {
+    border: none;
+    cursor: pointer;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* Font : NanumSquareNeo */
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url("./font/NanumSquareNeoOTF-Lt.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url("./font/NanumSquareNeoOTF-Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url("./font/NanumSquareNeoOTF-Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url("./font/NanumSquareNeoOTF-Eb.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url("./font/NanumSquareNeoOTF-Hv.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, input, select, textarea, button {
+  font-family: "NanumSquareNeo", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111;
+  background: #fff;
+}
+
+html, body {
+  height: 100%;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  outline: none;
+}
+
+.container {
+  width: min(1800px, 100%);
+  margin: 0 auto;
+  /* padding: 0 60px; */
+}
+
+@media (max-width: 1024px) {
+  .container { padding: 0 32px; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+}
