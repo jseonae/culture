@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,18 +10,16 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
 </head>
-
 <body>
   <header class="header">
     <div class="container header_inner">
       <h1 class="header_logo">
         <a href="index.html">
-          <img src="./images/logo.png" alt="문화공감터">
+          <img src="./images/common/logo.png" alt="문화공감터">
         </a>
       </h1>
-
       <nav class="gnb">
         <ul class="gnb_list">
           <li><a href="#">소개</a></li>
@@ -32,7 +29,7 @@
         </ul>
       </nav>
       <button class="header__menu" type="button">
-        <img src="./images/ico-menu.png" alt="전체메뉴">
+        <img src="./images/main/ico-menu.svg" alt="전체메뉴">
       </button>
     </div>
   </header>
@@ -41,14 +38,14 @@
       <div id="Swiper">
         <div class="swiper-wrapper">
           <a class="swiper-slide slide1" href="#">
-            <img src="images/swiper_bg01.jpg" alt="당진 문화공감터 메인 비주얼">
+            <img src="images/main/swiper_bg01.jpg" alt="당진 문화공감터 메인 비주얼">
             <div class="visual_text1">
               <p>지역주민의 문화예술이 일상이 되는곳</p>
               <h2>당진 문화공감터</h2>
             </div>
           </a>
           <a class="swiper-slide slide2" href="#">
-            <img src="images/swiper_bg02.jpg" alt="일화기억">
+            <img src="images/main/swiper_bg02.jpg" alt="일화기억">
             <div class="visual_text2">
               <p>| 2024.03.21(목) ~ 04.06(토) |</p>
               <p>프로그램 - 당진 청년들의 유쾌한 '일화기억'</p>
@@ -56,7 +53,7 @@
             </div>
           </a>
           <a class="swiper-slide slide2" href="#">
-            <img src="./images/swiper_bg03.jpg" alt="아빠도 처음이야">
+            <img src="./images/main/swiper_bg03.jpg" alt="아빠도 처음이야">
             <div class="visual_text2">
               <p>| 2024.11.23(토) ~ 12.14(토) |</p>
               <p>프로그램 - '아빠도 처음이야'</p>
@@ -64,7 +61,7 @@
             </div>
           </a>
           <a class="swiper-slide slide2" href="#">
-            <img src="./images/swiper_bg04.jpg" alt="시선이 머무는 곳">
+            <img src="./images/main/swiper_bg04.jpg" alt="시선이 머무는 곳">
             <div class="visual_text2">
               <p>| 2024.08.07(수) ~ 16(금) |</p>
               <p>전시 - '시선이 머무는 곳'</p>
@@ -73,9 +70,9 @@
           </a>
         </div>
       </div>
-      <div class="mv-control" aria-label="메인 비주얼 컨트롤">
-        <div class="swiper-pagination" aria-label="슬라이드 페이지네이션"></div>
-        <button type="button" class="swiper-toggle" aria-label="자동재생 일시정지" aria-pressed="false">
+      <div class="mv-control">
+        <div class="swiper-pagination"></div>
+        <button type="button" class="swiper-toggle" aria-pressed="false">
           <span class="ico pause" aria-hidden="true"></span>
         </button>
       </div>
@@ -85,229 +82,305 @@
         <p>Exhibit · Performance</p>
         <h2>전시공연 안내</h2>
       </div>
-
       <div class="exhibit_top">
-        <div class="exhibit_tab" role="tablist" aria-label="전시공연 분류">
-          <button class="on" type="button" role="tab" aria-selected="true">전체</button>
-          <button type="button" role="tab" aria-selected="false">공연</button>
-          <button type="button" role="tab" aria-selected="false">전시</button>
+        <div class="exhibit_tab">
+          <button class="on" data-tab="menu1" type="button" role="tab">전체</button>
+          <button data-tab="menu2" type="button" role="tab">문화공감터</button>
+          <button data-tab="menu3" type="button" role="tab">당진예총</button>
         </div>
         <div class="more_btn">
           <a href="#">더보기 +</a>
         </div>
       </div>
-      <div id="exhibit_swiper" class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#">
-              <div class="poster_box">
-                <img src="images/poster01.jpg" alt="">
-              </div>
-              <div>
-                <p>[문화공감터] 특별기획전시</p>
-                <strong>비상전</strong>
-                <p>2024-11-12 ~ 2024-11-20</p>
-              </div>
-            </a>
+      <div id="menu1" class="tabcont on">
+        <div id="total_swiper" class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="poster_box">
+                  <img src="images/main/poster01.jpg" alt="">
+                </div>
+                <div class="poster_txt">
+                  <p>[문화공감터] 특별기획전시 <공감> 비상전</p>
+                  <p>문화공감터 2층 전시관</p>
+                  <p>2024-11-12 ~ 2024-11-20</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="poster_box">
+                  <img src="images/main/poster02.jpg" alt="">
+                </div>
+                <div class="poster_txt">
+                  <p>[콘서트] 2023 문화도시 공감콘서트</p>
+                  <p>문화공감터 4층 공연장</ㅔ>
+                  <p>2023-10-31</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="poster_box">
+                  <img src="images/main/poster03.jpg" alt="">
+                </div>
+                <div class="poster_txt">
+                  <p>[국립극장 공연영상화 사업] 우리동네 작은극장</p>
+                  <p>문화공감터</p>
+                  <p>2024-08-01 ~ 2024-08-29</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="poster_box">
+                  <img src="images/main/poster04.jpg" alt="">
+                </div>
+                <div class="poster_txt">
+                  <p>[특별기획전시] 2024 문화공감터 <공감> 나라사랑 특별전시:기억</p>
+                  <p>문화공감터 2층 전시관</p>
+                  <p>2024-06-22 ~ 2024-06-30</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="poster_box">
+                  <img src="images/main/poster05.jpg" alt="">
+                </div>
+                <div class="poster_txt">
+                  <p>[기획전시] 2024 문화공감터 기획전시 - 행운가득 소품 전시</p>
+                  <p>문화공감터 2층 전시관</p>
+                  <p>2024-03-19 ~ 2024-03-31</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="poster_box">
+                  <img src="images/main/poster06.jpg" alt="">
+                </div>
+                <div class="poster_txt">
+                  <p>[특별 기획전시] <공감>7월 구상과 비구상의 만남 조화</p>
+                  <p>문화공감터 2층 전시관</p>
+                  <p>2024-07-16 ~ 2024-07-31</p>
+                </div>
+              </a>
+            </div>
           </div>
-
-          <div class="swiper-slide">
-            <a href="#">
-              <div class="poster_box">
-                <img src="images/poster02.jpg" alt="">
+          <div class="exhibit_bottom">
+            <div class="exhibit_control">
+              <div class="exhibit_bar">
+                <span class="exhibit_bar_fill" aria-hidden="true"></span>
               </div>
-              <div>
-                <p>[콘서트] 2023 문화도시</p>
-                <strong>공감 콘서트</strong>
-                <p>2023-10-31</p>
+              <div class="exhibit_count">
+                <span class="cur">1</span>
+                <span>/</span>
+                <span class="total">6</span>
               </div>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a href="#">
-              <div class="poster_box">
-                <img src="images/poster03.jpg" alt="">
-              </div>
-              <div>
-                <p>[국립극장 공연영상화 사업]</p>
-                <strong>우리동네 작은극장</strong>
-                <p>2024-08-01 ~ 2024-08-29</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a href="#">
-              <div class="poster_box">
-                <img src="images/poster04.jpg" alt="">
-              </div>
-              <div>
-                <p>[특별기획전시] 2024 문화공감터</p>
-                <strong>나라사랑 특별전</strong>
-                <p>2024-06-22 ~ 2024-06-30</p>
-              </div>
-            </a>
+              <button type="button" class="exhibit_prev"><img src="images/main/ico-left.svg" alt=""></button>
+              <button type="button" class="exhibit_next"><img src="images/main/ico-right.svg" alt=""></button>
+            </div>
           </div>
         </div>
-        <!-- <div class="exhibit_bottom">
-          <div class="swiper-pagination"></div>
-          <div class="swiper-nav">
-            <button type="button" class="swiper-button-prev" aria-label="이전"></button>
-            <button type="button" class="swiper-button-next" aria-label="다음"></button>
-          </div>
-        </div> -->
+      </div>
+      <div id="menu2" class="tabcont">
+        문화공감터
+      </div>
+      <div id="menu3" class="tabcont">
+        당진예총
       </div>
     </div>
     <div class="news_wrap">
-      <div class="main_title_L">
-        <p>News</p>
-        <h2>공지사항</h2>
-      </div>
-      <div class="news_layout">
-        <div class="news_list">
-          <a href="#">
-            <h6>문화창작공간 ‘문화공감터’</h6>
-            <p>문화공감터 공간을 안내합니다.</p>
-            <img src="images/btn_arrow.svg" alt="">
-          </a>
-          <a href="#">
-            <h6>문화와 예술의 새싹이</h6>
-            <p>다양한 문화 프로그램을 만나보세요.</p>
-            <img src="images/btn_arrow.svg" alt="">
-          </a>
-          <a href="#">
-            <h6>문화공감터 기획전시</h6>
-            <p>전시 일정과 소식을 안내합니다.</p>
-            <img src="images/btn_arrow.svg" alt="">
-          </a>
-          <a href="#">
-            <h6>문화공감터 기획전시</h6>
-            <p>전시 일정과 소식을 안내합니다.</p>
-            <img src="images/btn_arrow.svg" alt="">
-          </a>
+      <div class="news_notice">
+        <div>
+          <div class="main_title_L">
+            <p>News</p>
+            <h2>공지사항</h2>
+          </div>
         </div>
-        <div class="main_popup">
-          <div class="swiper" id="news_swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#">
-                  <img src="images/news_banner01.jpg" alt="">
-                  <div>
-                    <strong>문화공감터 렉처콘서트</strong>
-                    <p>문화공감터 4층 공연장</p>
-                    <p>2023. 8. 22. TUE 19:30</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                  <img src="images/news_banner02.jpg" alt="">
-                  <div>
-                    <strong>프로그램 안내</strong>
-                    <p>상세 내용을 확인하세요</p>
-                  </div>
-                </a>
-              </div>
+        <div class="news_list">
+          <div class="news_list_item">
+            <a href="#">
+              <h6>문화창작공간 ‘문화공감터’</h6>
+              <p>복합문화공간의 개관은 언제나 기쁘고 행복한 일입니다. 당진시민의 제안에서 시작됐던</p>
+              <div class="news_ico"><img src="images/main/btn_arrow.svg" alt=""></div>
+            </a>
+          </div>
+          <div class="news_list_item">
+            <a href="#">
+              <h6>문화와 예술의 새싹이</h6>
+              <p>복합문화공간의 개관은 언제나 기쁘고 행복한 일입니다. 당진시민의 제안에서 시작됐던</p>
+              <div class="news_ico"><img src="images/main/btn_arrow.svg" alt=""></div>
+            </a>
+          </div>
+          <div class="news_list_item">
+            <a href="#">
+              <h6>문화공감터 기획전시</h6>
+              <p>문화공감터는 문화를 사랑하는 모든 이들에게 문이 활짝 열려 있는 공간입니다. 문화공감터에서는</p>
+              <div class="news_ico"><img src="images/main/btn_arrow.svg" alt=""></div>
+            </a>
+          </div>
+          <div class="news_list_item">
+            <a href="#">
+              <h6>문화공감터 기획전시</h6>
+              <p>문화공감터 목요시네마 '영화장날' 이라는 프로그램이 진행된다는 반가운 소식이 있습니다.</p>
+              <div class="news_ico"><img src="images/main/btn_arrow.svg" alt=""></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="main_popup">
+        <div id="popup_swiper" class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/popup/popup_sample01.jpg" alt="팝업1">
+              </a>
             </div>
 
-            <div class="news_control">
-              <span class="news_count" aria-label="배너 페이지">
-                <span>01</span>
-                <span>/</span>
-                <span>03</span>
-              </span>
-              <button type="button" class="news_prev" aria-label="이전"></button>
-              <button type="button" class="news_next" aria-label="다음"></button>
-              <button type="button" class="news_toggle" aria-label="정지/재생"></button>
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/popup/popup_sample02.jpg" alt="팝업1">
+              </a>
             </div>
+          </div>
+          <div class="news_control">
+            <div class="news_count">
+              <span class="news_current">01</span>
+              <span class="news_dash"></span>
+              <span class="news_total">03</span>
+            </div>
+            <button type="button" class="news_prev"></button>
+            <button type="button" class="news_toggle"></button>
+            <button type="button" class="news_next"></button>
           </div>
         </div>
       </div>
     </div>
-
-
     <div class="space_wrap">
       <div class="main_title">
         <p>Space introduction</p>
         <h2>공간 소개</h2>
         <span>문화공감터의 공간을 소개합니다!</span>
       </div>
-
-      <div class="space_list">
-        <a href="#">
-          <!-- <span>01</span> -->
-          <img src="images/space01.jpg" alt="">
-          <strong>창작이 열리는 오픈스튜디오</strong>
-          <p>오픈스튜디오 한눈에 보기</p>
-        </a>
-
-        <a href="#">
-          <!-- <span>02</span> -->
-          <img src="images/space02.jpg" alt="">
-          <strong>이야기가 펼쳐지는 종합연습실</strong>
-          <p>종합연습실 한눈에 보기</p>
-        </a>
-
-        <a href="#">
-          <!-- <span>03</span> -->
-          <img src="images/space03.jpg" alt="">
-          <strong>감동이 머무는 공연장</strong>
-          <p>공연장 한눈에 보기</p>
-        </a>
+      <div id="space_swiper" class="space_list swiper">
+        <div class="swiper-wrapper">
+          <div class="space_list_item swiper-slide">
+            <a href="#">
+              <span class="space_num">01</span>
+              <div class="space_img">
+                <img src="images/main/space01.jpg" alt="">
+              </div>
+              <div class="space_txt">
+                <p>창작이 열리는 오픈스튜디오</p>
+                <p>오픈스튜디오 한눈에 보기</p>
+              </div>
+            </a>
+          </div>
+          <div class="space_list_item swiper-slide">
+            <a href="#">
+              <span class="space_num">02</span>
+              <div class="space_img">
+                <img src="images/main/space02.jpg" alt="">
+              </div>
+              <div class="space_txt">
+                <p>감각을 깨우는 소연습실1</p>
+                <p>소연습실1 한눈에 보기</p>
+              </div>
+            </a>
+          </div>
+          <div class="space_list_item swiper-slide">
+            <a href="#">
+              <span class="space_num">03</span>
+              <div class="space_img">
+                <img src="images/main/space03.jpg" alt="">
+              </div>
+              <div class="space_txt">
+                <p>영감이 피어나는 소연습실2</p>
+                <p>소연습실2 한눈에 보기</p>
+              </div>
+            </a>
+          </div>
+          <div class="space_list_item swiper-slide">
+            <a href="#">
+              <span class="space_num">04</span>
+              <div class="space_img">
+                <img src="images/main/space04.jpg" alt="">
+              </div>
+              <div class="space_txt">
+                <p>이야기가 펼쳐지는 중연습실</p>
+                <p>중연습실 한눈에 보기</p>
+              </div>
+            </a>
+          </div>
+          <div class="space_list_item swiper-slide">
+            <a href="#">
+              <span class="space_num">05</span>
+              <div class="space_img">
+                <img src="images/main/space05.jpg" alt="">
+              </div>
+              <div class="space_txt">
+                <p>즐거움이 머무는 공연장 </p>
+                <p>공연장 한눈에 보기</p>
+              </div>
+            </a>
+          </div>
+          <div class="space_list_item swiper-slide">
+            <a href="#">
+              <span class="space_num">06</span>
+              <div class="space_img">
+                <img src="images/main/space06.jpg" alt="">
+              </div>
+              <div class="space_txt">
+                <p>열린 공간에서 만나는 옥외 전시관</p>
+                <p>옥외 전시관 한눈에 보기</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button type="button" class="space_btn space_prev" aria-label="이전"></button>
+        <button type="button" class="space_btn space_next" aria-label="다음"></button>
       </div>
-
       <div class="space_more">
         <a href="#">자세히 보기</a>
       </div>
     </div>
-
-
-    <div class="organizations_wrap">
-      <div class="main_title">
-        <p>Branch introduction</p>
-        <h2>당진예총 및 지부소개</h2>
-      </div>
-
-      <div class="organizations_area">
-        <!-- 배경(큰 이미지/영상 영역) -->
-        <div class="organizations_visual">
-          <img src="images/org_bg.jpg" alt="">
-          <div class="organizations_text">
-            <strong>당진예총</strong>
-            <p>당진예총은 지역 예술인과 시민을 잇는 문화예술 플랫폼입니다.</p>
-          </div>
+  </div>
+  <div class="organizations_wrap">
+    <div class="organizations_bg">
+      <div class="container">
+        <div class="main_title_L">
+          <p>Member organizations</p>
+          <h2>당진예총 및 지부소개</h2>
         </div>
-
-        <!-- 하단 썸네일(가로 스크롤/슬라이드) -->
-        <div class="organizations_list">
-          <div class="swiper" id="org_swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><a href="#"><img src="images/org01.jpg" alt="당진예총"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="images/org02.jpg" alt="(사)한국연예예술인협회"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="images/org03.jpg" alt="(사)한국문인협회"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="images/org04.jpg" alt="(사)한국사진작가협회"></a></div>
-              <div class="swiper-slide"><a href="#"><img src="images/org05.jpg" alt="지부소개"></a></div>
+        <div class="organizations_main">
+          <a href="#">
+            <img src="images/main/org_bg.jpg" alt="">
+            <div class="organizations_text">
+              <img src="images/main/djfaco_logo.png" alt="당진예총">
+              <p>당진예총은 지역 예술인과 시민을 잇는 문화예술 단체로,<br>
+              다양한 예술 활동을 통해 당진의 문화 가치를 확장해 나갑니다.</p>
             </div>
-
-            <div class="swiper-control">
-              <button type="button" class="swiper-button-prev" aria-label="이전"></button>
-              <button type="button" class="swiper-button-next" aria-label="다음"></button>
-            </div>
-          </div>
+          </a>
         </div>
+        <ul class="organizations_branch">
+          <li><a href="#"><img src="images/main/org01.jpg" alt="한국미술협회 당진지부"></a></li>
+          <li><a href="#"><img src="images/main/org02.jpg" alt="한국문인협회 당진지부"></a></li>
+          <li><a href="#"><img src="images/main/org03.jpg" alt="한국음악협회 당진지부"></a></li>
+          <li><a href="#"><img src="images/main/org04.jpg" alt="한국국악협회 당진지부"></a></li>
+          <li><a href="#"><img src="images/main/org05.jpg" alt="한국연예예술인총연합회"></a></li>
+          <li><a href="#"><img src="images/main/org06.jpg" alt="한국건축가협회"></a></li>
+          <li><a href="#"><img src="images/main/org07.jpg" alt="시낭송협회"></a></li>
+        </ul>
       </div>
     </div>
-
-
-
   </div>
   <footer class="footer">
     <div class="container footer_inner">
       <div class="footer_top">
         <div class="footer_logo">
-          <img src="images/logo.png" alt="문화공감터">
+          <img src="images/common/logo.png" alt="문화공감터">
         </div>
         <div class="footer_link">
           <ul>
@@ -319,7 +392,7 @@
       </div>
       <div class="footer_bottom">
         <div class="footer_info">
-          <p>충청남도 당진시 당진중앙2로 76, 당진문화공감터 <span>041-350-2868</span></p>
+          <p>충청남도 당진시 당진중앙2로 76, 당진문화공감터 <span>T.041-350-2868</span></p>
           <p>COPYRIGHT 2025 당진문화공감터 All Rights Reserved.</p>
         </div>
       </div>
