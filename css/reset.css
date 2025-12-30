@@ -14,7 +14,7 @@ a {
 }
 img, fieldset {
     border:none;
-    vertical-align:top; 
+    vertical-align:middle; 
 }
 address,cite,code,em {
     font-style:normal;
