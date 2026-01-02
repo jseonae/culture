@@ -9,26 +9,37 @@
 .header_inner {
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.header_logo {
+  flex-shrink: 0;
 }
 
 .header_logo img {
   vertical-align: middle;
 }
 
+.gnb {
+  margin-left: 320px; 
+}
+
 .gnb_list{
-    height: 40px;
-    display: flex;
-    gap: 60px;
-    font-size: 1.25rem;
+  display: flex;
+  height: 40px;
+  gap: 60px;
+  font-size: 1.25rem;
 }
 
 .gnb_list li {
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.header_menu {
+  margin-left: auto; 
 }
 
 .container{

@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/* 네가 이미 쓴 값 유지 */
+.sub_visual {
+  width: 1800px;
+  height: 230px;
+  background: url(../images/common/sub_visual.png) no-repeat center / cover;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px; /* 오른쪽도 둥글게 */
+  overflow: hidden; /* 라운드 밖 튀어나오는거 방지 */
+  position: relative;
+}
+
+.layout {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.sv_wrap{
+  height: 100%;
+  position: relative;
+}
+
+/* 상단 네비 */
+.navi{
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.navi_path{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 20px;
+  line-height: 20px;
+  color: rgba(255,255,255,0.9);
+}
+
+.navi_path >a{
+  color: inherit;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.navi_path .current{
+  font-weight: 700;
+  color: #fff;
+}
+
+.home{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/common/ico_navi_home_w.svg) no-repeat center;
+  
+  /* -webkit-mask: url(../images/common/ico_navi_home_w.svg) no-repeat 50% 50%;
+          mask: url(../images/common/ico_navi_home_w.svg) no-repeat 50% 50%;
+  -webkit-mask-size: 16px 16px;
+          mask-size: 16px 16px; */
+}
+
+/* 화살표 구분자: '공연전시 > 문화공감터' 느낌 */
+.navi_path a + a{
+  position: relative;
+  padding-left: 14px;
+  
+}
+
+.navi_path a + a::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  background: url(../images/common/ico_location_arr.svg) no-repeat center / contain;
+  opacity: 0.9;
+  
+}
+
+/* .navi_path a::before {
+    mask: url(../images/common/ico_location_arr.svg) no-repeat 50% 50%;
+    -webkit-mask: url(../images/common/ico_location_arr.svg) no-repeat 50% 50%;
+    background: #fff;
+
+} */
+/* 오른쪽 버튼 */
+.navi_btn .btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: transparent;      /* 텍스트 숨김 */
+  font-size: 0;            /* 텍스트 숨김 */
+  background: rgba(255,255,255,0.06);
+}
+
+.navi_btn .btn.sns::before{
+  content:"";
+  width: 16px;
+  height: 16px;
+  background: url(../images/common/ico_share.svg) no-repeat center / contain;
+}
+
+/* 타이틀 */
+.sv_title{
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  font-size: 44px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  z-index: 2;
+}
+
+/* 우측 퀵 버튼 */
+.sv_quick{
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.sv_quick .quick{
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,255,255,0.16);
+}
+
+.sv_quick .quick.active{
+  background: #b8742a;
+}
