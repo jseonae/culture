@@ -277,7 +277,6 @@
 
 .exhibit_tab button:hover {
   background: rgba(175,126,26,0.1);
-  /* border: 1px solid transparent; */
   color: #AF7E1A;
   box-sizing: border-box;
   border: 1px solid #AF7E1A;
@@ -337,7 +336,7 @@
   height: 100%;
   background: #AF7E1A;    
   transform-origin: left center;
-  transform: scaleX(0);   /* JS에서 scaleX로 채움 */
+  transform: scaleX(0); 
   transition: transform 0.3s ease;
 }
 
@@ -578,7 +577,6 @@
   width: 4px;
   height: 18px;
   background:#555;
-  /* border-radius: 2px; */
   transform: translateY(-50%);
 }
 .news_toggle::before{ left: 8px; }
@@ -598,7 +596,9 @@
   border-bottom: 8px solid transparent;
   border-left: 12px solid #555;
 }
-.news_toggle.play::after{ display:none; }
+.news_toggle.play::after {
+   display:none;
+  }
 
 
 /* 공간소개 */
@@ -616,7 +616,6 @@
   margin-top: 50px;
   position: relative;
   overflow: hidden;
-  /* padding: 0 28px; */
   box-sizing: border-box;
 }
 
@@ -716,64 +715,126 @@
 
 
 /* 예총 및 지부소개 */
-.organizations_wrap {
+.organizations_wrap{
   width: 100%;
   position: relative;
 }
-.organizations_bg {
+
+.org_top{
+  position: relative;
+  display: flex;
+  align-items: stretch;
   height: 714px;
+}
+
+.organizations_bg{
+  flex: 1;
+  position: relative;
   background: url(../images/main/organization_bg.png) no-repeat left center;
   background-size: cover;
+  padding-top: 120px;
+  padding-left: max(calc((100vw - 1800px) / 2 + 60px), 16px);
+  padding-right: max(calc((100vw - 1800px) / 2 + 60px), 16px);
+  box-sizing: border-box;
 }
-.organizations_wrap .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 220px;
-}
-.organizations_main {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
 
+.organizations_main{
+  position: relative;
+  flex-shrink: 0;      
 }
-.organizations_main a {
-  display: block;
-  color: #fff;
+
+
+.organizations_main > a{
+  display: inline-block;  
+  position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
-.organizations_text {
+
+
+.organizations_main > a::after{
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+  transition: background .3s ease;
+  pointer-events: none;
+}
+
+
+.organizations_main > a > img{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: none;
+  transition: transform .5s ease;
+}
+
+.organizations_main > a:hover::after{
+  background: rgba(0,0,0,0.10);
+}
+.organizations_main > a:hover > img{
+  transform: scale(1.02);
+}
+
+
+.organizations_text{
   position: absolute;
   top: 240px;
   left: 120px;
+  color: #fff;
+  transition: transform .3s ease;
 }
 
-.organizations_text p {
+.organizations_text img{
+  display: block;
+}
+
+.organizations_text p{
   margin-top: 18px;
   font-size: 17px;
   line-height: 1.6;
   color: #fff;
 }
 
-.organizations_branch {
-  margin-top: 36px;
-  display: flex;
-  gap: 20px;
+.branch_wrap{
+  position: relative;
+  z-index: 2;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -336px;
+  padding-left: clamp(16px, 3.3vw, 60px);
+  padding-right: clamp(16px, 3.3vw, 60px);
+  box-sizing: border-box;
 }
 
-.organizations_branch li {
+.organizations_branch{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 36px 0 0;
+  padding: 0;
   list-style: none;
 }
 
-.organizations_branch a {
+.organizations_branch li{
+  list-style: none;
+}
+
+.organizations_branch a{
   display: block;
   border-radius: 16px;
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.organizations_branch img {
+.organizations_branch a:hover{
+  transform: translateY(-20px);
+}
+
+.organizations_branch img{
   display: block;
   width: 100%;
   height: auto;
