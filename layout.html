@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,32 +15,61 @@
   <script src="js/main.js"></script>
   <script src="js/common.js"></script>
 </head>
+
 <body>
-    <div id="header"></div>
-      <div class="container">
+  <script>
+    $(function () {
+      $('.tab_nav a').click(function (e) {
+        e.preventDefault();
+
+        var activeTab = $(this).data('tab');
+
+        $('.tab_nav li').removeClass('on');
+        $('.tabcont').removeClass('on');
+
+        $(this).parent('li').addClass('on');
+        $('#' + activeTab).addClass('on');
+      });
+    });
+  </script>
+  <div id="header"></div>
+  <div class="container">
     <div class="sub_visual">
       <div class="layout sv_wrap">
-        <div class="navi">
+        <div class="navi_wrap">
           <div class="navi_path">
             <a href="#" class="icon home"></a>
             <a href="#"><span>공연전시</span></a>
-            <a href="#" class="current"><span>문화공감터</span></a>
+            <a href="#"><span>문화공감터</span></a>
           </div>
           <div class="navi_btn">
-            <a href="#" class="btn sns" title="공유">SNS</a>
             <a href="#" class="btn print" title="프린트"></a>
+            <a href="#" class="btn sns" title="공유"></a>
           </div>
         </div>
-        <h2 class="sub_title">문화공감터</h2>
-        <div class="sub_quick">
-          <a href="#" class="quick active">문화공감터</a>
-          <a href="#" class="quick">당진예총</a>
-          <a href="#" class="quick">관람예절</a>
+        <div class="lnb_wrap">
+          <h2 class="sub_title">문화공감터</h2>
+          <div class="sub_quick">
+            <a href="#" class="quick active">문화공감터</a>
+            <a href="#" class="quick">당진예총</a>
+            <a href="#" class="quick">관람예절</a>
+          </div>
         </div>
 
       </div>
     </div>
+    <div class="layout">
+      <div class="tab">
+        <ul class="tab_nav">
+          <li class="on"><a href="#" data-tab="tab1">공연일정</a></li>
+          <li><a href="#" data-tab="tab2">갤러리</a></li>
+        </ul>
+        <div class="tab_con">
+          <div id="tab1" class="tabcont on">공연일정 con</div>
+          <div id="tab2" class="tabcont">갤러리 con</div>
+        </div>
+      </div>
+    </div>
   </div>
-
   <div id="footer"></div>
 </body>

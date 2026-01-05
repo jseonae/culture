@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>문화공감터</title>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <script>
+    $(function () {
+      $('.tab_nav a').click(function (e) {
+        e.preventDefault();
+
+        var activeTab = $(this).data('tab');
+
+        $('.tab_nav li').removeClass('on');
+        $('.tabcont').removeClass('on');
+
+        $(this).parent('li').addClass('on');
+        $('#' + activeTab).addClass('on');
+      });
+
+      $('.tab_b_nav a').click(function (e) {
+        e.preventDefault();
+
+        var activeTab = $(this).data('tab');
+
+        $('.tab_b_nav li').removeClass('on');
+        $('.tab_b_con').removeClass('on');
+
+        $(this).parent('li').addClass('on');
+        $('#' + activeTab).addClass('on');
+      });
+    });
+  </script>
+  <div id="header"></div>
+  <div class="container">
+    <div class="sub_visual no_visual ">
+      <div class="layout sv_wrap sc_wrap">
+        <div class="navi_wrap">
+          <div class="navi_path">
+            <a href="#" class="icon home"></a>
+            <a href="#"><span>소개</span></a>
+            <a href="#"><span>조직구성도</span></a>
+            <a href="#"><span>회원단체</span></a>
+            <a href="#"><span>미술협회</span></a>
+          </div>
+          <div class="navi_btn">
+            <a href="#" class="btn print" title="프린트"></a>
+            <a href="#" class="btn sns" title="공유"></a>
+          </div>
+        </div>
+        <div class="lnb_wrap">
+          <h2 class="sub_title">문화공감터</h2>
+          <div class="sub_quick">
+            <a href="#" class="quick">인사말</a>
+            <a href="#" class="quick">연혁</a>
+            <a href="#" class="quick active">조직구성도</a>
+            <a href="#" class="quick">CI소개</a>
+            <a href="#" class="quick">찾아오시는길</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="layout">
+      <div class="tab">
+        <ul class="tab_nav">
+          <li class="on"><a href="#" data-tab="tab1">당진예총</a></li>
+          <li><a href="#" data-tab="tab2">회원단체</a></li>
+        </ul>
+        <!-- <div class="tab_con">
+          <div id="tab1" class="tabcont on">공연일정 con</div>
+          <div id="tab2" class="tabcont">갤러리 con</div>
+        </div> -->
+      </div>
+      <div class="tab_branch">
+        <ul class="tab_b_nav">
+          <li class="on"><a href="#">미술협회</a></li>
+          <li><a href="#">문인협회</a></li>
+          <li><a href="#">음악협회</a></li>
+          <li><a href="#">국악협회</a></li>
+          <li><a href="#">연예협회</a></li>
+          <li><a href="#">건축협회</a></li>
+          <li><a href="#">시낭송협회</a></li>
+        </ul>
+        <div class="tab_b_con">
+          <div id="branch1" class="tabcont on">미술협회 con</div>
+          <div id="branch2" class="tabcont">문인협회 con</div>
+          <div id="branch3" class="tabcont">음악협회 con</div>
+          <div id="branch4" class="tabcont">국악협회 con</div>
+          <div id="branch5" class="tabcont">연예협회 con</div>
+          <div id="branch6" class="tabcont">건축협회 con</div>
+          <div id="branch7" class="tabcont">시낭송협회 con</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
