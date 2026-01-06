@@ -196,10 +196,10 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: "#space_swiper .space_prev",
       nextEl: "#space_swiper .space_next",
     },
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
   });
 });
 

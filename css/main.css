@@ -411,6 +411,11 @@
   justify-content: space-between;
   position: relative;
   margin-top: 150px;
+  d
+}
+
+.news_notice {
+  padding-left: 33px;
 }
 
 .news_list {
@@ -612,16 +617,25 @@
   margin-top: 120px;
 }
 
+.space_swiper_mask{
+  overflow-x: hidden; 
+  overflow-y: visible;
+}
+
 .space_list{
   margin-top: 50px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
 .space_list_item {
   width: 546px;
   box-sizing: border-box;
+}
+
+.space_list_item > a{
+  position: relative;
 }
 
 .space_num {
@@ -662,7 +676,6 @@
   cursor: pointer;
   z-index: 10;
 }
-
 
 #space_swiper .space_prev{left: 0;}
 #space_swiper .space_next{right: 0;}
@@ -733,8 +746,8 @@
   background: url(../images/main/organization_bg.png) no-repeat left center;
   background-size: cover;
   padding-top: 120px;
-  padding-left: max(calc((100vw - 1800px) / 2 + 60px), 16px);
-  padding-right: max(calc((100vw - 1800px) / 2 + 60px), 16px);
+  padding-left: max(calc((100vw - 1800px) / 2 + 33px), 16px);
+  padding-right: max(calc((100vw - 1800px) / 2 + 33px), 16px);
   box-sizing: border-box;
 }
 
@@ -743,14 +756,12 @@
   flex-shrink: 0;      
 }
 
-
 .organizations_main > a{
   display: inline-block;  
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-
 
 .organizations_main > a::after{
   content:"";
@@ -804,8 +815,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: -336px;
-  padding-left: clamp(16px, 3.3vw, 60px);
-  padding-right: clamp(16px, 3.3vw, 60px);
+  padding-left: 33px;
+  padding-right: 33px;
   box-sizing: border-box;
 }
 
